@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+      .mySlides {display:none;}
+      </style>
+        </head>
+<body>
+  <header>
+    <style>
+      body{
+  background-image: url("background2.jpg");
+  
+}
+    </style>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Retro+Plus</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="consoles.html">Consoles</a>
+          </li>
+          <li class="nav-item dropdown">
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Video Games
+  </a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Nintendo</a></li>
+    <li><a class="dropdown-item" href="#">Playstation</a></li>
+    <li><a class="dropdown-item" href="#">Xbox</a></li>
+  </ul>
+</li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <a href="signin.html">Sign In</a>
+        </form>
+      </div>
+  </nav>
+  </header>
+  <h2 class="stock">recent stock</h2>
+
+   <div class="slideshow-container">
+    <img class="mySlides" src="img/consoles1.jpg" style="width:150%">
+    <img class="mySlides" src="img/consoles2.jpg" style="width:150%">
+    <img class="mySlides" src="img/consoles4.jpg" style="width:150%">
+    <img class="mySlides" src="img/consoles3.jpg" style="width:150%">
+  </div>
+  <script src="js/main.js"></script>
+  <script>
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); 
+  }
+  </script>
+  
+</body>
+</html>
